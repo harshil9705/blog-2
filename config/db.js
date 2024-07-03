@@ -1,7 +1,7 @@
 const { default: mongoose } = require("mongoose");
-
+require("dotenv").config()
 const connection = ()=>{
-    mongoose.connect("mongodb+srv://harshillakhani009:harshillakhani009@cluster0.ngocu6s.mongodb.net/?retryWrites=true&w=majority")
+    mongoose.connect(process.env.DB_URL)
     console.log("db connected");
 }
 
